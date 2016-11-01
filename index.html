@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>materialize</title>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <style>
+    /* form validate */
+    .input-field div.error {
+        color: #ff4081;
+        font-size: 0.8rem;
+        left: 0rem;
+        position: relative;
+        top: -1rem;
+        transform: translateY(0%);
+    }
+    .input-field input.error,.input-field textarea.error {
+        border-bottom: 1px solid #ff4081;
+        box-shadow: 0 1px 0 0 #ff4081;
+    }
+  </style>
+</head>
+
+<body>
+<!-- nav -->
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#"><i class="material-icons left">search</i>Link with Left Icon</a></li>
+      <li><a href="#"><i class="material-icons right">view_module</i>Link with Right Icon</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /nav -->
+
+<!-- slider -->
+<!-- <div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="http://lorempixel.com/580/250/nature/1"> random image
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="http://lorempixel.com/580/250/nature/2"> random image
+      <div class="caption left-align">
+        <h3>Left Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="http://lorempixel.com/580/250/nature/3"> random image
+      <div class="caption right-align">
+        <h3>Right Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="http://lorempixel.com/580/250/nature/4"> random image
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+  </ul>
+</div> -->
+<!-- /slider -->
+
+<!-- form -->
+<div class="container">
+<form class="formValidate" id="formValidate" method="get" action="" novalidate="novalidate">
+    <div class="row">
+        <div class="input-field col s12">
+            <label for="uname">Username*</label>
+            <input id="uname" name="uname" data-error=".errorTxt1" type="text">
+            <div class="errorTxt"></div>
+        </div>
+        <div class="input-field col s12">
+            <label for="cemail">E-Mail *</label>
+            <input id="cemail" name="cemail" data-error=".errorTxt2" type="email">
+            <div class="errorTxt2"></div>
+        </div>
+        <div class="input-field col s12">
+            <label for="password">Password *</label>
+            <input id="password" name="password" data-error=".errorTxt3" type="password">
+            <div class="errorTxt3"></div>
+        </div>
+        <div class="input-field col s12">
+            <label for="cpassword">Confirm Password *</label>
+            <input id="cpassword" name="cpassword" data-error=".errorTxt4" type="password">
+            <div class="errorTxt4"></div>
+        </div>
+        <div class="input-field col s12">
+            <label for="curl">URL *</label>
+            <input id="curl" name="curl" data-error=".errorTxt5" type="url">
+            <div class="errorTxt5"></div>
+        </div>
+        <div class="col s12">
+            <label for="crole">Role *</label>
+            <select class="error browser-default" id="crole" name="crole" data-error=".errorTxt6">
+                <option value="" disabled="" selected="">Choose your profile</option>
+                <option value="1">Manager</option>
+                <option value="2">Developer</option>
+                <option value="3">Business</option>
+            </select>
+            <div class="input-field">
+                <div class="errorTxt6"></div>
+            </div>
+        </div> 
+        <div class="input-field col s12">
+            <textarea id="ccomment" name="ccomment" class="materialize-textarea validate" data-error=".errorTxt7"></textarea>
+            <label for="ccomment">Your comment *</label>
+            <div class="errorTxt7"></div>
+        </div>
+        <div class="col s12">
+            <label for="genter_select">Gender *</label>
+            <p>
+              <input name="cgender" id="gender_male" data-error=".errorTxt8" type="radio">
+              <label for="gender_male">Male</label>
+            </p>
+            <p>
+              <input name="cgender" id="gender_female" value="f" type="radio">
+              <label for="gender_female">Female</label>
+            </p>
+            <div class="input-field">
+                <div class="errorTxt8"></div>
+            </div>
+        </div>
+        <div class="col s12">
+            <label for="tnc_select">T&amp;C *</label>
+              <p>
+                <input class="checkbox" id="cagree" name="cagree" data-error=".errorTxt9" type="checkbox"> 
+                <label for="cagree">Please agree to our policy</label>
+              </p>
+            <div class="input-field">
+              <div class="errorTxt6"></div>
+            </div>
+        </div>
+        <div class="input-field col s12">
+            <button class="btn waves-effect waves-light right submit" type="submit" name="action">Submit
+              <i class="mdi-content-send right"></i>
+            </button>
+        </div>
+    </div>
+</form>
+</div>
+<!-- /form -->
+
+<!-- footer -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2014 Copyright Text
+    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->      
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js" ></script>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    
+    $('.slider').slider({full_width: true});
+    $(".button-collapse").sideNav();
+
+
+    $("#formValidate").validate({
+        rules: {
+            uname: {
+                required: true,
+                minlength: 5
+            },
+            cemail: {
+                required: true,
+                email:true
+            },
+            password: {
+        required: true,
+        minlength: 5
+      },
+      cpassword: {
+        required: true,
+        minlength: 5,
+        equalTo: "#password"
+      },
+      curl: {
+                required: true,
+                url:true
+            },
+            crole:"required",
+            ccomment: {
+        required: true,
+        minlength: 15
+            },
+            cgender:"required",
+      cagree:"required",
+        },
+        //For custom messages
+        messages: {
+            uname:{
+                required: "Enter a username",
+                minlength: "Enter at least 5 characters"
+            },
+            curl: "Enter your website",
+        },
+        errorElement : 'div',
+        errorPlacement: function(error, element) {
+          var placement = $(element).data('error');
+          if (placement) {
+            $(placement).append(error)
+          } else {
+            error.insertAfter(element);
+          }
+        }
+     });
+  });
+</script>
+</html>
